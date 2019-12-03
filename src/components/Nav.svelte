@@ -69,5 +69,16 @@
 		<li><a class:selected="{segment === 'explain-empty'}" href="explain-empty">explain ''</a></li>
 		<li><a class:selected="{segment === 'explain-result'}" href="explain-result">explain (result)</a></li>
 		<li><a class:selected="{segment === 'a'}" href="a">a</a></li>
+		<li><a class:selected="{segment === 'undefined-reminder'}" href="undefined-reminder">undefined (reminder)</a></li>
+		<li><a class:selected="{segment === 'undefined-reminder-zero'}" href="undefined-reminder-zero">undefined (reminder 0)</a></li>
+		<li><a class:selected="{segment === 'undefined-reminder-undefined'}" href="undefined-reminder-undefined">undefined (reminder undefined)</a></li>
+		<li><a class:selected="{segment === 'plusplus-reminder'}" href="plusplus-reminder">plusplus (reminder)</a></li>
+		<li><a class:selected="{segment === 'two-reminder'}" href="two-reminder">two (reminder)</a></li>
+		<li><a class:selected="{segment === 'undefined-string-reminder'}" href="undefined-string-reminder">undefiend string (reminder)</a></li>
+		<li><a class:selected="{segment === 'd-reminder'}" href="d-reminder">d (reminder)</a></li>
+		<li><a class:selected="{segment === 'code-reminder'}" href="code-reminder">code (reminder)</a></li>
+		<li><a class:selected="{segment === 'function'}" href="function">function</a></li>
+		<li><a class:selected="{segment === 'function-underline'}" href="function-underline">function-underline</a></li>
+		<li><a class:selected="{segment === 'code-reminder-function'}" href="code-reminder-function">code (reminder, function)</a></li>
 	</ul>
 </nav>
