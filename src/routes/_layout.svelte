@@ -20,7 +20,7 @@
 	}
 </style>
 
-{#if segment.indexOf('reminder') >= 0}
+{#if segment && segment.indexOf('reminder') >= 0}
 	<main>
 		<slot></slot>
 	</main>

@@ -1,9 +1,45 @@
 <script>
+	import * as sapper from '@sapper/app';
+
 	export let segment;
+
+	const routes = [
+		'/',
+		'jsfuck',
+		'code',
+		'code-wrapped',
+		'edit',
+		'explain-0',
+		'explain-empty',
+		'explain-result',
+		'a',
+		'undefined-reminder',
+		'undefined-reminder-zero',
+		'undefined-reminder-undefined',
+		'plusplus-reminder',
+		'two-reminder',
+		'undefined-string-reminder',
+		'd-reminder',
+		'code-reminder',
+		'function',
+		'function-underline',
+		'code-reminder-function',
+		'full-reminder',
+	];
+
+	$: segmentIndex = segment ? routes.indexOf(segment) : 0;
 
 	function keyHandler(event) {
 		if (event.target.contentEditable !== 'true') {
-			console.log('navigate');
+			if (event.key === 'ArrowRight') {
+				const newIndex = Math.min(segmentIndex + 1, routes.length - 1);
+				sapper.goto(routes[newIndex]);
+			} else if (event.key === 'ArrowLeft') {
+				const newIndex = Math.max(segmentIndex - 1, 0);
+				sapper.goto(routes[newIndex]);
+			} else if (event.key === '0') {
+				sapper.goto(routes[0]);
+			}
 		}
 	}
 </script>
@@ -15,6 +51,7 @@
 		border-bottom: 1px solid rgba(255,62,0,0.1);
 		font-weight: 300;
 		padding: 0 1em;
+		display: none;
 	}
 
 	ul {
@@ -80,5 +117,6 @@
 		<li><a class:selected="{segment === 'function'}" href="function">function</a></li>
 		<li><a class:selected="{segment === 'function-underline'}" href="function-underline">function-underline</a></li>
 		<li><a class:selected="{segment === 'code-reminder-function'}" href="code-reminder-function">code (reminder, function)</a></li>
+		<li><a class:selected="{segment === 'full-reminder'}" href="full-reminder">full-reminder</a></li>
 	</ul>
 </nav>
