@@ -11,6 +11,9 @@
             return '"' + result + '"';
         } else if (Array.isArray(result)) {
             return '[' + result.map(r => formatResult(r)) + ']';
+        } else if (typeof result === 'function') {
+            const fname = result.toString().match(/\w+/g)[1];
+            return '<em>f ' + fname + '()</em>';
         }
 
         return result;
@@ -58,6 +61,6 @@
 	>
 	</div>
     <div class="result" class:hasResult={result !== ''}>
-        === {result}
+        === {@html result}
     </div>
 </div>
