@@ -25,6 +25,7 @@
 		'function-underline',
 		'code-reminder-function',
 		'full-reminder',
+		'question',
 	];
 
 	$: segmentIndex = segment ? routes.indexOf(segment) : 0;
@@ -118,5 +119,6 @@
 		<li><a class:selected="{segment === 'function-underline'}" href="function-underline">function-underline</a></li>
 		<li><a class:selected="{segment === 'code-reminder-function'}" href="code-reminder-function">code (reminder, function)</a></li>
 		<li><a class:selected="{segment === 'full-reminder'}" href="full-reminder">full-reminder</a></li>
+		<li><a class:selected="{segment === 'question'}" href="question">question</a></li>
 	</ul>
 </nav>
